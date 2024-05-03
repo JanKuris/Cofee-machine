@@ -30,7 +30,4 @@ resources = {
     "coffee": 100,
 }
 
-help = print("""
-    Type 'report' for resources status.
-    Type 'off' for turn off coffe machine.
-            """) 
+money_vault = []
