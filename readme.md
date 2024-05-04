@@ -1,0 +1,1 @@
+Overall, this code creates a simple coffee machine simulator where customers can select drinks, check resources, insert coins, and receive their orders, while also providing options to check the current resources, turn off the machine, or get help.
