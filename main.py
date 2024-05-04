@@ -16,7 +16,7 @@ def customer_input():
         elif customer_choice == "report":
             print(resources)
             sum_money = sum(money_vault)
-            print(f"Money ${sum_money}")
+            print(f"Money: ${sum_money}")
             return None
     return True
     
@@ -27,9 +27,8 @@ def resources_check(customer_order):
             return False
         resources[ingredient] -= value
     for ingredient, amount in resources.items():
-        print(f"{ingredient}: {amount}") 
-    return True
-        
+        res = f"{ingredient}: {amount}"
+        return res
 
 def coins_calculator(customer_order):
     print(f"Please your drink cost ${MENU[customer_order]['cost']}, insert coin: ")
@@ -41,15 +40,12 @@ def coins_calculator(customer_order):
     if total_value < MENU[customer_order]['cost']:
         print("Sorry, that's not enough money. Money refunded.")
         return True
-    # if total_value >= MENU[customer_order]['cost']:
     change = total_value - MENU[customer_order]['cost']
     formated_money_back = "{:.2f}".format(change)
     money_vault.append(MENU[customer_order]['cost'])
     print(f"Here is ${formated_money_back} in change")
     print(f"Here is your {customer_order}. Enjoy :)")
     return True
-
-        
                   
 def main():
     customer_order = customer_input()
@@ -61,10 +57,9 @@ def main():
         return True
     else:
         return False
-    
 
 if __name__ == "__main__":
     while True:
         if not main():
             break
-    
+     

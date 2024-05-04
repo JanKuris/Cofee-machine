@@ -30,4 +30,5 @@ resources = {
     "coffee": 100,
 }
 
+         
 money_vault = []
